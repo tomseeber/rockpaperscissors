@@ -23,7 +23,7 @@ document.onkeyup = function(event) {
 
     if (( userGuess === "r")||( userGuess === "p")||( userGuess === "s"))
     {
-        
+
         userText.textContent="";
         if ( userbox.classList.contains("bg-danger") ) {
             userbox.classList.remove("bg-danger");
@@ -31,7 +31,7 @@ document.onkeyup = function(event) {
 
       // Randomly chooses a choice from the options array. This is the Computer's guess.
         var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-        
+
         if( computerGuess === "r")
         {
             computerPlay.src='assets/images/rock.jpg';
@@ -40,23 +40,23 @@ document.onkeyup = function(event) {
         } else {
             computerPlay.src='assets/images/scissors.jpg';
         }
-        
+
 
         if( userGuess === "r")
         {
             humanPlay.src='assets/images/rock.jpg';
-        } 
+        }
         else if (userGuess === "p") {
             humanPlay.src='assets/images/paper.jpg';
         } else {
             humanPlay.src='assets/images/scissors.jpg';
         }
-        
+
         //computerText.textContent = computerGuess;
       // Alerts the key the user pressed (userGuess).
       //alert("User guess: " + userGuess);
 
-      //possible combinations  r,p  r,s, r,r, p,p, p,s p,r... 
+      //possible combinations  r,p  r,s, r,r, p,p, p,s p,r...
       if ((userGuess === "r") && (computerGuess === "s")) {
         humanwins++;
       } else if ((userGuess === "r") && (computerGuess === "p")) {
@@ -72,7 +72,7 @@ document.onkeyup = function(event) {
       } else if (userGuess === computerGuess) {
         ties++;
       }
-    
+
       comptuter_wins_section.textContent=humanlosses;
       computer_loss_section.textContent=humanwins;
       human_win_section.textContent=humanwins;
