@@ -48,7 +48,7 @@ document.onkeyup = function(event) {
         }
         else if (userGuess === "p") {
             humanPlay.src='assets/images/paper.jpg';
-        } else {
+        } else if (userGuess === "s"){
             humanPlay.src='assets/images/scissors.jpg';
         }
 
