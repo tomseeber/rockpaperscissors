@@ -46,7 +46,7 @@ document.onkeyup = function(event) {
         {
             humanPlay.src='assets/images/rock.jpg';
         } 
-        else if (computerGuess === "p") {
+        else if (userGuess === "p") {
             humanPlay.src='assets/images/paper.jpg';
         } else {
             humanPlay.src='assets/images/scissors.jpg';
